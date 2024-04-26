@@ -100,7 +100,7 @@ void traverse() {
 	else {
 		Node* currentNode = START;
 		while (currentNode != NULL) {
-			cout << "NIM: " << currentNode->noMhs << ", Nama:" << currentNode->name << emdl;
+			cout << "NIM: " << currentNode->noMhs << ", Nama:" << currentNode->name << endl;
 			currentNode = currentNode->next;
 		}
 	}
@@ -173,6 +173,7 @@ int main() {
 				break;
 			case 3:
 				traverse();
+				break;
 			case 4:
 				searchData();
 				break;
@@ -180,10 +181,13 @@ int main() {
 				break;
 			default:
 				cout << "Pilihan tidak ada" << endl;
-				break
-
-
+				break;
 			}
 		}
-	}
+		catch (expection e)
+		{
+			cout << "Terjadi Kesalahan" << endl;
+		}
+
+	} while (pilihan != 5);
 }
